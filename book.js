@@ -14,10 +14,35 @@
  
 */
 
+//struct?
+const Person = jkt`
+    name: String
+    age: Number
+`
+
+const someVar = Person({ name: "Aditya", age: "26" })
+
+someVar.name // print "Aditya"
+someVar.age // print 26 (integer)
+
+function xyz(age, name) {
+    this.age = age;
+    this.name = name;
+    this.getAge = function () { return age; }
+}
+
+var myXyz = new xyz(42, 'fred');
+myXyz.getAge(); // Returns 42
+
+
 function book_function() {
 
+    var book_string = "";
     var code = "";
     var title = "title = " + '"' ;
+    var year = "";
+    var publisher = "";
+    var address = "";
 
-
+    navigator.clipboard.writeText(book_string);
 }
