@@ -39,7 +39,8 @@ function book_function() {
 
     var book_string = "@book{";
     var code = document.getElementById("code").value + ',\n';
-    var title = 'title = "' + document.getElementById("title").value + '",\n';
+    var title = '  title =     "' + document.getElementById("title").value + '",\n';
+    var author = '  author =     "' + document.getElementById("title").value + '",\n';
     var year = 'year = "' + document.getElementById("year").value + '",\n';
     var publisher = 'publisher = "' + document.getElementById("publisher").value + '",\n';
     var address = 'address = "' + document.getElementById("address").value + '"\n' + "}";
