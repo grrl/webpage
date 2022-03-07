@@ -64,19 +64,6 @@ function article_clear() {
         document.getElementById("article_button_clear").innerHTML = "Confirm"
         //document.getElementById("article_button_clear").id = "confirm_button"
 
-        /*
-        if (document.getElementbyId("article_button_clear").clicked == true) {
-            document.getElementById("code").value = "";
-            document.getElementById("title").value = "";    
-            document.getElementById("title").value = "";
-            document.getElementById("year").value = "";
-            document.getElementById("publisher").value = "";
-            document.getElementById("address").value = "";
-            document.getElementById("article_button_clear").style.background = '#FF0000';
-            document.getElementById("article_button_clear").style.borderColor = '#FF0000';
-            document.getElementById("article_button_clear").innerHTML = "Clear all";
-        }
-        */
         sleep(5000).then(() => {
 
             if (document.getElementById("article_button_clear").innerHTML == "Confirm") {
