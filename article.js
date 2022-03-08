@@ -74,29 +74,5 @@ function article_clear() {
 
         });
     }
-    /*
-    let btn = document.createElement("button");
-    btn.innerHTML = 'Confirm'
-    btn.
-    btn.type = "submit";
-    btn.name = "formBtn";
-    btn.className = "btn btn-primary";
-   
-    document.body.appendChild(btn);
-    */
-    /*
-    let confirmAction = confirm("Are you sure to execute this action?");
-    if (confirmAction) {
-        //alert("Action successfully executed");
-        document.getElementById("code").value = "";
-        document.getElementById("title").value = ""
-        document.getElementById("title").value = ""
-        document.getElementById("year").value = ""
-        document.getElementById("publisher").value = ""
-        document.getElementById("address").value = ""
 
-    } else {
-        alert("Action canceled");
-    }
-    */
 }
