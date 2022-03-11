@@ -14,6 +14,7 @@
 }
 
 */
+
 function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
@@ -36,7 +37,7 @@ function article_function() {
     book_string += address;
     navigator.clipboard.writeText(book_string);
     document.getElementById("article_button").innerHTML = "　　　Copied　　"
-
+    document.title = "your narrative has been updated";
     sleep(500).then(() => {
         document.getElementById("article_button").innerHTML = "Copy to clipboard"
     });
@@ -48,7 +49,6 @@ function article_clear() {
     if (document.getElementById("article_button_clear").innerHTML == "Confirm") {
 
         document.getElementById("code").value = "";
-        document.getElementById("title").value = "";
         document.getElementById("title").value = "";
         document.getElementById("year").value = "";
         document.getElementById("publisher").value = "";

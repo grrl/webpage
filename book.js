@@ -53,3 +53,37 @@ function book_function() {
     book_string += address;
     navigator.clipboard.writeText(book_string);
 }
+
+function book_clear() {
+
+    if (document.getElementById("article_button_clear").innerHTML == "Confirm") {
+
+        document.getElementById("code").value = "";
+        document.getElementById("title").value = "";
+        document.getElementById("title").value = "";
+        document.getElementById("year").value = "";
+        document.getElementById("publisher").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("article_button_clear").style.background = '#087cfc';
+        document.getElementById("article_button_clear").style.borderColor = '#087cfc';
+        document.getElementById("article_button_clear").innerHTML = "Clear all";
+    }
+    else {
+
+        document.getElementById("article_button_clear").style.background = '#7CFC00';
+        document.getElementById("article_button_clear").style.borderColor = '#7CFC00';
+        document.getElementById("article_button_clear").innerHTML = "Confirm"
+        //document.getElementById("article_button_clear").id = "confirm_button"
+
+        sleep(5000).then(() => {
+
+            if (document.getElementById("article_button_clear").innerHTML == "Confirm") {
+                document.getElementById("article_button_clear").style.background = '#087cfc';
+                document.getElementById("article_button_clear").style.borderColor = '#087cfc';
+                document.getElementById("article_button_clear").innerHTML = "Clear all"
+            }
+
+        });
+    }
+
+}
