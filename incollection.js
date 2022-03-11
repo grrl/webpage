@@ -40,16 +40,19 @@ function incollection_function() {
     //var address = '  address   = "' + document.getElementById("address").value + '"\n' + "}";
     var doi = '  doi      = ' + document.getElementById("doi").value + ',\n';
 
-    book_string += code;
-    book_string += title;
-    book_string += author;
-    book_string += year;
-    book_string += publisher;
-    book_string += address;
+    incollection_string += code;
+    incollection_string += author;
+    incollection_string += title;
+    incollection_string += booktitle;
+    incollection_string += editor;
+    incollection_string += publisher;
+    incollection_string += address;
+    incollection_string += year;
+    incollection_string += doi;
     navigator.clipboard.writeText(book_string);
 }
 
-function book_clear() {
+function incollection_clear() {
 
     if (document.getElementById("book_button_clear").innerHTML == "Confirm") {
 
