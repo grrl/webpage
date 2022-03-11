@@ -21,7 +21,7 @@ function sleep(time) {
 
 function article_function() {
 
-    var book_string = "@book{";
+    var book_string = "@article{";
     var code = document.getElementById("code").value + ',\n';
     var title = '  title     = "' + document.getElementById("title").value + '",\n';
     var author = '  author    = "' + document.getElementById("title").value + '",\n';
