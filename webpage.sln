@@ -21,6 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{F32D241F-B
 		main.html = main.html
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{535C5E58-0452-4F8D-A428-14D0DFC28BA8}"
+	ProjectSection(SolutionItems) = preProject
+		styles.css = styles.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -28,6 +33,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{949CBFEA-5DFB-47BE-8D98-6AA0358A414B} = {A981434A-41FE-44FA-A35C-BD398C91341A}
 		{F32D241F-B9E2-4A21-BF5F-20E9DF4A2809} = {A981434A-41FE-44FA-A35C-BD398C91341A}
+		{535C5E58-0452-4F8D-A428-14D0DFC28BA8} = {A981434A-41FE-44FA-A35C-BD398C91341A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D83FC69-FBFB-4A3E-AEB4-DBF07D5A7B96}
