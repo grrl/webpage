@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{F32D241F-B
 		book.html = book.html
 		incollection.html = incollection.html
 		main.html = main.html
+		online.html = online.html
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{535C5E58-0452-4F8D-A428-14D0DFC28BA8}"
