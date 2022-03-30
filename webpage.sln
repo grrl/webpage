@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JavaScript", "JavaScript", 
 		article.js = article.js
 		book.js = book.js
 		incollection.js = incollection.js
+		online.js = online.js
 		sleep.js = sleep.js
 	EndProjectSection
 EndProject
