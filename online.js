@@ -13,11 +13,11 @@ function book_function() {
 
     var book_string = "@online{";
     var code = document.getElementById("code").value + ',\n';
-    var name = '  name     = "' + document.getElementById("title").value + '",\n';
-    var author = '  author    = "' + document.getElementById("title").value + '",\n';
-    var title = '  title      = ' + document.getElementById("year").value + ',\n';
-    var addendum = '  addendum = "' + document.getElementById("publisher").value + '",\n';
-    var keywords = '  keywords   = "' + document.getElementById("address").value + '"\n' + "}";
+    var name = '  name     = "' + document.getElementById("name").value + '",\n';
+    var author = '  author    = "' + document.getElementById("author").value + '",\n';
+    var title = '  title      = ' + document.getElementById("title").value + ',\n';
+    var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
+    var keywords = '  keywords   = "' + document.getElementById("keywords").value + '"\n' + "}";
 
     book_string += code;
     book_string += title;
@@ -44,17 +44,17 @@ function book_clear() {
     }
     else {
 
-        document.getElementById("book_button_clear").style.background = '#7CFC00';
-        document.getElementById("book_button_clear").style.borderColor = '#7CFC00';
-        document.getElementById("book_button_clear").innerHTML = "Confirm"
+        document.getElementById("online_button_clear").style.background = '#7CFC00';
+        document.getElementById("online_button_clear").style.borderColor = '#7CFC00';
+        document.getElementById("online_button_clear").innerHTML = "Confirm"
         //document.getElementById("article_button_clear").id = "confirm_button"
 
         sleep(5000).then(() => {
 
-            if (document.getElementById("book_button_clear").innerHTML == "Confirm") {
-                document.getElementById("book_button_clear").style.background = '#087cfc';
-                document.getElementById("book_button_clear").style.borderColor = '#087cfc';
-                document.getElementById("book_button_clear").innerHTML = "Clear all"
+            if (document.getElementById("online_button_clear").innerHTML == "Confirm") {
+                document.getElementById("online_button_clear").style.background = '#087cfc';
+                document.getElementById("online_button_clear").style.borderColor = '#087cfc';
+                document.getElementById("online_button_clear").innerHTML = "Clear all"
             }
 
         });
