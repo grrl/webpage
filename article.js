@@ -36,7 +36,7 @@ function article_function() {
     book_string += publisher;
     book_string += address;
     navigator.clipboard.writeText(book_string);
-    document.getElementById("article_button").innerHTML = "　　　Copied　　"
+    document.getElementById("article_button").innerHTML = "　　　Copied　　";
     document.title = "your narrative has been updated";
     sleep(500).then(() => {
         document.getElementById("article_button").innerHTML = "Copy to clipboard"
