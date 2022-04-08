@@ -1,12 +1,59 @@
 ﻿// JavaScript source code
 
 
-var keywords_array = [];
+var keywords = [];
 
 //struct?
 
 function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+function add_function() {
+
+    //add to array
+
+    var word = document.getElementById("keywords").value;
+    keywords.push(word);
+
+    var keywords_text = "";
+    var length = keywords.length;
+    for (let index = 0; index < keywords.length; ++index) {
+        const element = keywords[index];
+        if (length == 1 || index == length - 1) {
+            keywords_text += element;
+        }
+        else {
+            keywords_text += element + ",";
+        }
+    }
+    document.getElementById("keywords_strings").value = keywords_text;
+    document.getElementById("keywords").value = "";
+
+}
+
+function remove_function() {
+
+    keywords.pop();
+    var length = keywords.length;
+
+    if (length == 0) {
+        document.getElementById("keywords_strings").value = "Keywords";
+    }
+    else {
+        var keywords_text = "";
+
+        for (let index = 0; index < keywords.length; ++index) {
+            const element = keywords[index];
+            if (length == 1 || index == length - 1) {
+                keywords_text += element;
+            }
+            else {
+                keywords_text += element + ",";
+            }
+        }
+        document.getElementById("keywords_strings").value = keywords_text;
+    }
 }
 
 function online_function() {
