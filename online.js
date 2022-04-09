@@ -13,6 +13,7 @@ function addendum_function() {
 
     var addendum_format = "(accessed: ";
 
+    var addendum = '  addendum = "' + addendum_format +  document.getElementById("addendum").value + ')",\n';
 
 }
 
@@ -88,13 +89,16 @@ function online_function() {
         }
     }
 
+    var addendum_format = "(accessed: ";
+
     var book_string = "@online{";
     var code = document.getElementById("code").value + ',\n';
     var author = '  author    = "' + document.getElementById("author").value + '",\n';
     var title = '  title      = "' + document.getElementById("title").value + '",\n';
     var url = '  url      = ' + document.getElementById("url").value + ',\n';
     //var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
-    var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
+    //var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
+    var addendum = '  addendum = "' + addendum_format + document.getElementById("addendum").value + ')",\n';
     var keywordslist = '  keywords   = "' + keywords_text + '"\n' + "}";
 
     //var keywords = '  keywords   = "' + document.getElementById("keywords").value + '"\n' + "}";
