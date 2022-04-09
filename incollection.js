@@ -1,4 +1,4 @@
-// JavaScript source code
+ï»¿// JavaScript source code
 
 //activate when user presses submi
 
@@ -51,10 +51,10 @@ function incollection_function() {
     incollection_string += doi;
     navigator.clipboard.writeText(incollection_string);
 
-    document.getElementById("incollection_button").innerHTML = "@@@Copied@@";
+    document.getElementById("incollection_button").innerHTML = "ã€€ã€€ã€€Copiedã€€ã€€";
     document.title = "your narrative has been updated";
     sleep(500).then(() => {
-        document.getElementById("article_button").innerHTML = "Copy to clipboard";
+        document.getElementById("incollection_button").innerHTML = "Copy to clipboard";
     });
 }
 
