@@ -115,6 +115,11 @@ function online_clear() {
 
     if (document.getElementById("online_button_clear").innerHTML == "Confirm") {
 
+        keywords.length = 0;
+
+        document.getElementById("keywords_strings").value = "No keywords yet";
+        document.getElementById("url").value = "";
+
         document.getElementById("code").value = "";
         document.getElementById("author").value = "";
         document.getElementById("title").value = "";
