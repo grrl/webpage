@@ -91,6 +91,7 @@ function online_function() {
     //var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
     //var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
     var addendum = '  addendum = "' + addendum_format + document.getElementById("addendum").value + ')",\n';
+
     var keywordslist = '  keywords = "' + keywords_text + '"\n' + "}";
 
     //var keywords = '  keywords   = "' + document.getElementById("keywords").value + '"\n' + "}";
