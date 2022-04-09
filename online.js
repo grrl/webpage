@@ -11,6 +11,8 @@ function sleep(time) {
 
 function addendum_function() {
 
+    var addendum_format = "(accessed: ";
+
 
 }
 
