@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{F32D241F-B
 	ProjectSection(SolutionItems) = preProject
 		article.html = article.html
 		book.html = book.html
+		conference.html = conference.html
 		incollection.html = incollection.html
 		main.html = main.html
 		online.html = online.html
