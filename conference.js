@@ -29,7 +29,7 @@ function conference_function() {
     var month = '  month     = ' + document.getElementById("month").value + ',\n';
     var publisher = '  publisher = "' + document.getElementById("publisher").value + '",\n';
     var address = '  address   = "' + document.getElementById("address").value + '",\n';
-    var pages = '  pages = "' + document.getElementById("pages").value + '"\n' + "}";
+    var pages = '  pages     = "' + document.getElementById("pages").value + '"\n' + "}";
 
 
     book_string += code;
