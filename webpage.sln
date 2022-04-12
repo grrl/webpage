@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JavaScript", "JavaScript", 
 	ProjectSection(SolutionItems) = preProject
 		article.js = article.js
 		book.js = book.js
+		conference.js = conference.js
 		incollection.js = incollection.js
 		online.js = online.js
 		sleep.js = sleep.js
