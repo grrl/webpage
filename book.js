@@ -16,16 +16,14 @@
 
 //struct?
 
+var timer;
+var index;
+
 function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
-var timer;
-var index = 0;
-function rotate_title(myindex, delay) {
-    var title1 = "4 Rapid Development";
-    var title2 = "Website for developers, designers and webmaster";
 
-    var title = "";
+function rotate_title(myindex, delay) {
 
     //var index = onoff;
     var index_string = "";
@@ -369,30 +367,23 @@ function rotate_title(myindex, delay) {
             myindex = -1;
 
             index_string = "Your narrative has been updated";
-            break;
+            document.title = index_string;
+            clearTimeout(timer)
+            return;
         default:
 
     }
 
     myindex++;
-    /*
-    if (index == 0) {
-        title = title1;
-        index = 1;
-    }
-    else if (index == 1) {
-        title = title2;
-        index = 0;
-    }
-    */
+
     document.title = index_string;
     timer = window.setTimeout("rotate_title(" + myindex + "," + delay + ")", delay);
 
 }
 
 function stop_timeout() {
-    clearTimeout(timer);
 
+    clearTimeout(timer);
 }
 
 function book_function() {
@@ -426,10 +417,11 @@ function book_function() {
 
 function book_clear() {
 
-    stop_timeout();
-    document.title = "Citations made simple";
-
     if (document.getElementById("book_button_clear").innerHTML == "Confirm") {
+
+        clearTimeout(timer);
+
+        document.title = "Citations made simple";
 
         document.getElementById("code").value = "";
         document.getElementById("title").value = "";
