@@ -366,7 +366,9 @@ function rotate_title(myindex, delay) {
             myindex = -1;
 
             index_string = "Your narrative has been updated";
-            break;
+            document.title = index_string;
+            clearTimeout(timer)
+            return;
         default:
 
     }
@@ -378,24 +380,19 @@ function rotate_title(myindex, delay) {
 
 }
 
-function stop_timeout() {
-
-    clearTimeout(timer);
-}
-
 function article_function() {
 
     var book_string = "@article{";
     var code = document.getElementById("code").value + ',\n';
     var title = '  title     = "' + document.getElementById("title").value + '",\n';
-    var author = '  author    = "' + document.getElementById("title").value + '",\n';
+    //var author = '  author    = "' + document.getElementById("title").value + '",\n';
     var year = '  year      = ' + document.getElementById("year").value + ',\n';
     var publisher = '  publisher = "' + document.getElementById("publisher").value + '",\n';
     var address = '  address   = "' + document.getElementById("address").value + '"\n' + "}";
 
     book_string += code;
     book_string += title;
-    book_string += author;
+    //book_string += author;
     book_string += year;
     book_string += publisher;
     book_string += address;
@@ -412,6 +409,10 @@ function article_function() {
 function article_clear() {
 
     if (document.getElementById("article_button_clear").innerHTML == "Confirm") {
+
+        clearTimeout(timer);
+
+        document.title = "Citations made simple";
 
         document.getElementById("code").value = "";
         document.getElementById("title").value = "";
