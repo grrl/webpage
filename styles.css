@@ -4,19 +4,22 @@
     background-color: #212529;
 }
 
-footer {
-    text-align: center;
-    margin-top: 120px; /*96pixels is one inch*/
-    background-color: #212529;
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-.my_footer {
-
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    color: white;
+&::-webkit-scrollbar:horizontal {
+    height: 0;
+    width: 0;
+    display: none;
 }
+
+&::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+}
+
 
 .stripe {
     background-color: #212529;
@@ -28,7 +31,7 @@ footer {
         background-color: #212529;
         position: absolute;
         height: 100%;
-        width: 4000px;
-        left: -2000px;
+        width: 200vw;
+        left: -100vw;
         z-index: -1;
     }
