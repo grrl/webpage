@@ -40,67 +40,194 @@
             </ul>
         </div>
     </nav>
-    <div class="container mt-3">
-        <h2>Incollection Citation form</h2>
-        <!--<form>-->
-        <div class="mb-3 mt-3">
-            <label for="name">Citekey:</label>
-            <input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">
-        </div>
-        <div class="mb-3 mt-3">
-            <label for="author">Author:</label>
-            <input type="text" class="form-control" id="author" placeholder="Enter author" name="author">
-        </div>
-        <div class="mb-3 mt-3">
-            <label for="title">Title:</label>
-            <input type="text" class="form-control" id="title" placeholder="Enter title" name="title">
-        </div>
-        <div class="mb-3 mt-3">
-            <label for="booktitle">Booktitle:</label>
-            <input type="text" class="form-control" id="booktitle" placeholder="Enter booktitle" name="booktitle">
-        </div>
-        <div class="mb-3 mt-3">
-            <label for="editor">Editor:</label>
-            <input type="text" class="form-control" id="editor" placeholder="Enter editor" name="editor">
-        </div>
-        <div class="mb-3 mt-3">
-            <label for="publisher">Publisher:</label>
-            <input type="text" class="form-control" id="publisher" placeholder="Enter publisher" name="publisher">
-        </div>
-        <div class="mb-3 mt-3">
-            <label for="address">Address:</label>
-            <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
-        </div>
-        <div class="mb-3">
-            <label for="year">Year:</label>
-            <input type="text" class="form-control" id="year" placeholder="Enter year" name="year">
-        </div>
-        <div class="mb-3">
-            <label for="pages">Pages:</label>
-            <input type="text" class="form-control" id="pages" placeholder="Enter pages" name="pages">
-        </div>
-        <div class="mb-3">
-            <label for="doi">Doi:</label>
-            <input type="text" class="form-control" id="doi" placeholder="Enter doi" name="doi">
-        </div>
-        <!--
-        <div class="form-check mb-3">
-            <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="remember"> Remember me
-            </label>
-        </div>
-        -->
-        <div style="float: left; padding-left: 0px">
-            <button onclick="incollection_function()" class="btn btn-primary" id="incollection_button">Copy to clipboard</button>
-            <!--</form>-->
-        </div>
-        <div style="float: right; padding-left: 0px;">
-            <button onclick="incollection_clear()" class="btn btn-primary" id="incollection_button_clear">Clear all</button>
-            <!--</form>-->
-        </div>
-        <!--</form>-->
 
+    <div style="    display: table;  /* Instead of display:block */margin-left: auto; margin-right: auto;">
+        <div class="container-lg mt-3">
+            <p style="padding-right: 300px; padding-left: 300px"></p>
+            <h2>Incollection Citation form</h2>
+            <!--<h2>                              </h2>-->
+            <!--<form>-->
+
+            <div class="mt-3 mb-3">
+                <label for="Name">Citekey:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                            <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z" />
+                            <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="code" placeholder="Enter cite key" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="Name">Author:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg>
+
+                    </span>
+                    <input type="text" class="form-control" id="author" placeholder="Enter author" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+
+            <div class="mt-3 mb-3">
+                <label for="Name">Title:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal" viewBox="0 0 16 16">
+                            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                            <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="title" placeholder="Enter title" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+
+            <div class="mt-3 mb-3">
+                <label for="Name">Booktitle:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                        </svg>
+
+
+                    </span>
+                    <input type="text" class="form-control" id="booktitle" placeholder="Enter booktitle" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="Name">Editor:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+                            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
+
+
+                    </span>
+                    <input type="text" class="form-control" id="editor" placeholder="Enter editor" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="Name">Publisher:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                            <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="publisher" placeholder="Enter publisher" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+
+            <div class="mt-3 mb-3">
+                <label for="Name">Address:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="address" placeholder="Enter address" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="Name">Year:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
+                            <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z" />
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                        </svg>
+
+
+                    </span>
+                    <input type="text" class="form-control" id="year" placeholder="Enter year" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="Name">Pages:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-123" viewBox="0 0 16 16">
+                            <path d="M2.873 11.297V4.142H1.699L0 5.379v1.137l1.64-1.18h.06v5.961h1.174Zm3.213-5.09v-.063c0-.618.44-1.169 1.196-1.169.676 0 1.174.44 1.174 1.106 0 .624-.42 1.101-.807 1.526L4.99 10.553v.744h4.78v-.99H6.643v-.069L8.41 8.252c.65-.724 1.237-1.332 1.237-2.27C9.646 4.849 8.723 4 7.308 4c-1.573 0-2.36 1.064-2.36 2.15v.057h1.138Zm6.559 1.883h.786c.823 0 1.374.481 1.379 1.179.01.707-.55 1.216-1.421 1.21-.77-.005-1.326-.419-1.379-.953h-1.095c.042 1.053.938 1.918 2.464 1.918 1.478 0 2.642-.839 2.62-2.144-.02-1.143-.922-1.651-1.551-1.714v-.063c.535-.09 1.347-.66 1.326-1.678-.026-1.053-.933-1.855-2.359-1.845-1.5.005-2.317.88-2.348 1.898h1.116c.032-.498.498-.944 1.206-.944.703 0 1.206.435 1.206 1.07.005.64-.504 1.106-1.2 1.106h-.75v.96Z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="pages" placeholder="Enter pages" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+
+            <div class="mt-3 mb-3">
+                <label for="Name">Doi:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc" viewBox="0 0 16 16">
+                            <path d="M3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="doi" placeholder="Enter doi" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div>
+                <div style="float: left; padding-left: 0px">
+                    <button onclick="incollection_function()" class="btn btn-primary" id="incollection_button">Copy to clipboard</button>
+                    <!--</form>-->
+                </div>
+                <div style="float: right; padding-left: 0px;">
+                    <button onclick="incollection_clear()" class="btn btn-primary" id="incollection_button_clear">Clear all</button>
+                    <!--</form>-->
+                </div>
+            </div>
+        </div>
     </div>
+
     <footer>
         <p class="my_footer">
             Kabocha<br>
