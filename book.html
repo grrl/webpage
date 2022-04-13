@@ -35,6 +35,32 @@
             </ul>
         </div>
     </nav>
+
+    <div style="    display: table;  /* Instead of display:block */margin-left: auto; margin-right: auto;">
+        <div class="container-lg mt-3">
+            <p style="padding-right: 250px; padding-left: 250px"></p>
+            <h2>Books Citation form</h2>
+            <!--<h2>                              </h2>-->
+            <!--<form>-->
+
+            <div class="mt-3 mb-3">
+                <label for="Name">Citekey:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                            <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z" />
+                            <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="code" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container mt-3">
         <h2>Book Citation form</h2>
         <!--<form>-->
@@ -63,12 +89,12 @@
             <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
         </div>
         <!--
-    <div class="form-check mb-3">
-        <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember"> Remember me
-        </label>
-    </div>
-    -->
+        <div class="form-check mb-3">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+            </label>
+        </div>
+        -->
         <div style="float: left; padding-left: 0px">
             <button onclick="book_function()" class="btn btn-primary" id="book_button">Copy to clipboard</button>
             <!--</form>-->
