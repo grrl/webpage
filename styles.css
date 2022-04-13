@@ -1,5 +1,8 @@
 ﻿
 
+.my_header {
+    background-color: #212529;
+}
 
 footer {
     text-align: center;
@@ -15,3 +18,17 @@ footer {
     color: white;
 }
 
+.stripe {
+    background-color: #212529;
+    position: relative;
+}
+
+    .stripe:before {
+        content: "";
+        background-color: #212529;
+        position: absolute;
+        height: 100%;
+        width: 4000px;
+        left: -2000px;
+        z-index: -1;
+    }
