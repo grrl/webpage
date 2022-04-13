@@ -421,7 +421,7 @@ function book_clear() {
 
         clearTimeout(timer);
 
-        document.title = "Citations made simple";
+        document.title = "Overleaf citations - made simple";
 
         document.getElementById("code").value = "";
         document.getElementById("title").value = "";

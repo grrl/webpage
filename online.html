@@ -49,58 +49,148 @@
             </ul>
         </div>
     </nav>
-    <div class="container mt-3">
-        <h2>Online Citation form</h2>
-        <!--<form>-->
-        <div class="mb-3 mt-3">
-            <label for="Name">Citekey:</label>
-            <input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">
-        </div>
-        <div class="mb-3 mt-3">
-            <label for="author">Author:</label>
-            <input type="text" class="form-control" id="author" placeholder="Enter author" name="title">
-        </div>
-        <div class="mb-3 mt-3">
-            <label for="year">Title:</label>
-            <input type="text" class="form-control" id="title" placeholder="Enter title" name="year">
-        </div>
-        <div class="mb-3 mt-3">
-            <label for="url">Url:</label>
-            <input type="url" class="form-control" id="url" placeholder="Enter URL" name="publisher">
-        </div>
-        <div class="mb-3">
-            <label for="addendum">Addendum:</label>
-            <input type="date" class="form-control" id="addendum" placeholder="Enter addendum" name="address">
-        </div>
-        <div class="mb-3">
-            <label for="keywords">Add keywords:</label>
-            <input type="text" class="form-control" id="keywords" placeholder="Enter a keyword" name="address">
-        </div>
-        <div style="float: left; padding-left: 0px; position:absolute;">
-            <button onclick="add_function()" class="btn btn-primary" id="add_button">Add</button>
-            <!--</form>-->
-        </div>
-        <div style="float: right; padding-left: 0px; padding-bottom: 18px;">
-            <button onclick="remove_function()" class="btn btn-primary" id="clear_button">Remove last</button>
-            <!--</form>-->
-        </div>
-        <div class="mb-3">
-            <input type="text" readonly="readonly" class="form-control" id="keywords_strings" placeholder="No keywords yet" name="address">
-        </div>
-        <!--
-        <div class="form-check mb-3">
-            <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="remember"> Remember me
-            </label>
-        </div>
-        -->
-        <div style="float: left; padding-left: 0px; position:absolute;">
-            <button onclick="online_function()" class="btn btn-primary" id="online_button">Copy to clipboard</button>
-            <!--</form>-->
-        </div>
-        <div style="float: right; padding-left: 0px; padding-bottom: 25px;">
-            <button onclick="online_clear()" class="btn btn-primary" id="online_button_clear">Clear all</button>
-            <!--</form>-->
+    <div style="    display: table;  /* Instead of display:block */margin-left: auto; margin-right: auto;">
+        <div class="container-lg mt-3">
+            <p style="padding-right: 300px; padding-left: 300px"></p>
+            <h2>Online Citation form</h2>
+            <!--<h2>                              </h2>-->
+            <!--<form>-->
+
+            <div class="mt-3 mb-3">
+                <label for="Name">Citekey:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                            <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z" />
+                            <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="code" placeholder="Enter cite key" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="Name">Author:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg>
+
+                    </span>
+                    <input type="text" class="form-control" id="author" placeholder="Enter author" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+
+            <div class="mt-3 mb-3">
+                <label for="Name">Title:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal" viewBox="0 0 16 16">
+                            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                            <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="title" placeholder="Enter title" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+
+            <div class="mt-3 mb-3">
+                <label for="Name">Url:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="url" placeholder="Enter url" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="Name">Addendum:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-day" viewBox="0 0 16 16">
+                            <path d="M4.684 12.523v-2.3h2.261v-.61H4.684V7.801h2.464v-.61H4v5.332h.684zm3.296 0h.676V9.98c0-.554.227-1.007.953-1.007.125 0 .258.004.329.015v-.613a1.806 1.806 0 0 0-.254-.02c-.582 0-.891.32-1.012.567h-.02v-.504H7.98v4.105zm2.805-5.093c0 .238.192.425.43.425a.428.428 0 1 0 0-.855.426.426 0 0 0-.43.43zm.094 5.093h.672V8.418h-.672v4.105z" />
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                            <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                        </svg>
+                    </span>
+                    <input type="date" class="form-control" id="addendum" placeholder="Enter addendum" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="Name">Add keywords:</label>
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 16">
+                            <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z" />
+                            <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" id="keywords" placeholder="Enter a keyword" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div>
+                <div style="float: left; padding-left: 0px; position:absolute;">
+                    <button onclick="add_function()" class="btn btn-primary" id="add_button">Add</button>
+                    <!--</form>-->
+                </div>
+                <div style="float: right; padding-left: 0px; padding-bottom: 18px;">
+                    <button onclick="remove_function()" class="btn btn-primary" id="clear_button">Remove last</button>
+                    <!--</form>-->
+                </div>
+            </div>
+            <div class="mt-3 mb-3">
+
+                <div class="input-group">
+                    <!--<label for="Name">Citekey:</label>-->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags" viewBox="0 0 16 16">
+                            <path d="M3 2v4.586l7 7L14.586 9l-7-7H3zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2z" />
+                            <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1v5.086z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" readonly="readonly" id="keywords_strings" placeholder="No keywords yet" aria-label="Input group example" aria-describedby="basic-addon1">
+
+                    <!--<input type="text" class="form-control" id="code" placeholder="Use this key to cite" name="code">-->
+                </div>
+            </div>
+            <div>
+                <div style="float: left; padding-left: 0px; position:absolute;">
+                    <button onclick="online_function()" class="btn btn-primary" id="online_button">Copy to clipboard</button>
+                    <!--</form>-->
+                </div>
+                <div style="float: right; padding-left: 0px; padding-bottom: 25px;">
+                    <button onclick="online_clear()" class="btn btn-primary" id="online_button_clear">Clear all</button>
+                    <!--</form>-->
+                </div>
+
+            </div>
+
         </div>
     </div>
     <footer>
