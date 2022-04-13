@@ -19,6 +19,33 @@
 function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
+var timer;
+function rotate_title(onoff, delay) {
+    var title1 = "4 Rapid Development";
+    var title2 = "Website for developers, designers and webmaster";
+
+    var title = "";
+
+    var index = onoff;
+
+
+    if (index == 0) {
+        title = title1;
+        index = 1;
+    }
+    else if (index == 1) {
+        title = title2;
+        index = 0;
+    }
+    document.title = title;
+    timer = window.setTimeout("rotate_title(" + index + "," + delay + ")", delay);
+
+}
+
+function stop_timeout() {
+    clearTimeout(timer);
+
+}
 
 function book_function() {
 
@@ -39,13 +66,20 @@ function book_function() {
     navigator.clipboard.writeText(book_string);
 
     document.getElementById("book_button").innerHTML = "　　　Copied　　";
-    document.title = "your narrative has been updated";
+    //make switching scrolling
+    document.title = "Your narrative has been updated";
     sleep(500).then(() => {
         document.getElementById("book_button").innerHTML = "Copy to clipboard";
     });
+    rotate_title(1, 1000);
 }
 
+//rotate_title(0, 1000);
+
 function book_clear() {
+
+    stop_timeout();
+
 
     if (document.getElementById("book_button_clear").innerHTML == "Confirm") {
 
@@ -58,6 +92,9 @@ function book_clear() {
         document.getElementById("book_button_clear").style.background = '#087cfc';
         document.getElementById("book_button_clear").style.borderColor = '#087cfc';
         document.getElementById("book_button_clear").innerHTML = "Clear all";
+        //make switching
+        document.title = "Overleaf citations made simple";
+
     }
     else {
 
