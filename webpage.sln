@@ -32,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{535C5E58-045
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resource", "Resource", "{D6E3187A-B557-4AA9-982A-903E2B278442}"
 	ProjectSection(SolutionItems) = preProject
+		kabocha icon 100x100.png = kabocha icon 100x100.png
+		kabocha icon 150x150.png = kabocha icon 150x150.png
 		kabocha icon updates 12.png = kabocha icon updates 12.png
 	EndProjectSection
 EndProject
