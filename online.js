@@ -33,7 +33,7 @@ function add_function() {
             keywords_text += element;
         }
         else {
-            keywords_text += element + ",";
+            keywords_text += element + ", ";
         }
     }
     document.getElementById("keywords_strings").value = keywords_text;
@@ -59,7 +59,7 @@ function remove_function() {
                 keywords_text += element;
             }
             else {
-                keywords_text += element + ",";
+                keywords_text += element + ", ";
             }
         }
         document.getElementById("keywords_strings").value = keywords_text;
@@ -76,7 +76,7 @@ function online_function() {
         if (length == 1 || index == length - 1) {
             keywords_text += element;
         }
-        else {
+        else { 
             keywords_text += element + ",";
         }
     }
