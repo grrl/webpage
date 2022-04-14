@@ -381,7 +381,7 @@ function rotate_title(myindex, delay) {
 
 function conference_function() {
 
-    var book_string = "@InProceedings{";
+    var conference_string = "@InProceedings{";
     var code = document.getElementById("code").value + ',\n';
     var author = '  author    = "' + document.getElementById("author").value + '",\n';
     var title = '  title     = "' + document.getElementById("title").value + '",\n';
@@ -393,17 +393,17 @@ function conference_function() {
     var pages = '  pages     = "' + document.getElementById("pages").value + '"\n' + "}";
 
 
-    book_string += code;
-    book_string += author;
-    book_string += title;
-    book_string += booktitle;
-    book_string += year;
-    book_string += month;
-    book_string += publisher;
-    book_string += address;
-    book_string += pages;
+    conference_string += code;
+    conference_string += author;
+    conference_string += title;
+    conference_string += booktitle;
+    conference_string += year;
+    conference_string += month;
+    conference_string += publisher;
+    conference_string += address;
+    conference_string += pages;
 
-    navigator.clipboard.writeText(book_string);
+    navigator.clipboard.writeText(conference_string);
 
     document.getElementById("conference_button").innerHTML = "　　　Copied　　";
     document.title = "your narrative has been updated";

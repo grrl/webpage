@@ -382,7 +382,7 @@ function rotate_title(myindex, delay) {
 
 function article_function() {
 
-    var book_string = "@article{";
+    var article_string = "@article{";
     var code = document.getElementById("code").value + ',\n';
     var title = '  title     = "' + document.getElementById("title").value + '",\n';
     //var author = '  author    = "' + document.getElementById("title").value + '",\n';
@@ -390,13 +390,13 @@ function article_function() {
     var publisher = '  publisher = "' + document.getElementById("publisher").value + '",\n';
     var address = '  address   = "' + document.getElementById("address").value + '"\n' + "}";
 
-    book_string += code;
-    book_string += title;
-    //book_string += author;
-    book_string += year;
-    book_string += publisher;
-    book_string += address;
-    navigator.clipboard.writeText(book_string);
+    article_string += code;
+    article_string += title;
+    //article_string += author;
+    article_string += year;
+    article_string += publisher;
+    article_string += address;
+    navigator.clipboard.writeText(article_string);
     document.getElementById("article_button").innerHTML = "　　　Copied　　";
     document.title = "your narrative has been updated";
     sleep(500).then(() => {

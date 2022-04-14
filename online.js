@@ -457,7 +457,7 @@ function online_function() {
 
     var addendum_format = "(accessed: ";
 
-    var book_string = "@online{";
+    var online_string = "@online{";
     var code = document.getElementById("code").value + ',\n';
     var author = '  author   = "' + document.getElementById("author").value + '",\n';
     var title = '  title    = "' + document.getElementById("title").value + '",\n';
@@ -470,13 +470,13 @@ function online_function() {
 
     //var keywords = '  keywords   = "' + document.getElementById("keywords").value + '"\n' + "}";
 
-    book_string += code;
-    book_string += author;
-    book_string += title;
-    book_string += url;
-    book_string += addendum;
-    book_string += keywordslist;
-    navigator.clipboard.writeText(book_string);
+    online_string += code;
+    online_string += author;
+    online_string += title;
+    online_string += url;
+    online_string += addendum;
+    online_string += keywordslist;
+    navigator.clipboard.writeText(online_string);
 
     document.getElementById("online_button").innerHTML = "　　　Copied　　";
     document.title = "your narrative has been updated";
