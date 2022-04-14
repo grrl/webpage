@@ -499,6 +499,7 @@ function online_clear() {
         keywords.length = 0;
         document.getElementById("keywords_strings").style.color = "#6c757d";
         document.getElementById("keywords_strings").value = "No keywords yet";
+        document.getElementById("keywords").style.borderColor = "#ced4da";
         document.getElementById("url").value = "";
 
         document.getElementById("code").value = "";
