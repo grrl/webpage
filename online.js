@@ -414,7 +414,8 @@ function remove_function() {
     var length = keywords.length;
 
     if (length == 0) {
-        document.getElementById("keywords_strings").value = "No keywords";
+        document.getElementById("keywords_strings").style.color = "#6c757d";
+        document.getElementById("keywords_strings").value = "No keywords yet";
     }
     else {
         var keywords_text = "";
