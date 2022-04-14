@@ -401,6 +401,8 @@ function incollection_function() {
     var address = '  address   = "' + document.getElementById("address").value + '",\n';
     //var author = '  author    = "' + document.getElementById("title").value + '",\n';
     var year = '  year      = ' + document.getElementById("year").value + ',\n';
+    var pages = '  pages     = "' + document.getElementById("pages").value + '",\n';
+
     //var publisher = '  publisher = "' + document.getElementById("publisher").value + '",\n';
     //var address = '  address   = "' + document.getElementById("address").value + '"\n' + "}";
     var doi = '  doi       = "' + document.getElementById("doi").value + '"\n' + "}";
@@ -413,6 +415,7 @@ function incollection_function() {
     incollection_string += publisher;
     incollection_string += address;
     incollection_string += year;
+    incollection_string += pages;
     incollection_string += doi;
     navigator.clipboard.writeText(incollection_string);
 
