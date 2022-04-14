@@ -381,11 +381,14 @@ function add_function() {
 
     var word = document.getElementById("keywords").value;
 
+
     if (word == "") {
         document.getElementById("keywords").style.borderColor = "red";
         return;
     }
     else {
+        var document_string = "Added " + word;
+        document.title = document_string;
         document.getElementById("keywords").style.borderColor = "rgb(221, 221, 221)";
     }
 
@@ -410,10 +413,13 @@ function add_function() {
 function remove_function() {
 
 
-    keywords.pop();
-    var length = keywords.length;
+    if (keywords.length > 0)
+        document.title = "Removed " + keywords.pop();
 
-    if (length == 0) {
+    //keywords.pop();
+
+
+    if (keywords.length == 0) {
         document.getElementById("keywords_strings").style.color = "#6c757d";
         document.getElementById("keywords_strings").value = "No keywords yet";
     }
@@ -430,6 +436,7 @@ function remove_function() {
             }
         }
         document.getElementById("keywords_strings").value = keywords_text;
+
     }
 }
 
