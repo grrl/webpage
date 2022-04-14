@@ -428,7 +428,7 @@ function remove_function() {
 
         for (let index = 0; index < keywords.length; ++index) {
             const element = keywords[index];
-            if (length == 1 || index == length - 1) {
+            if (keywords.length == 1 || index == keywords.length - 1) {
                 keywords_text += element;
             }
             else {
