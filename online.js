@@ -466,6 +466,7 @@ function online_function() {
     //var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
     //var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
     var addendum = '  addendum = "' + addendum_format + document.getElementById("addendum").value + ')",\n';
+    //developer.tizen.org/community/code-snippet/web-code-snippet/how-get-daymonthyear-input-date-type
     var input = document.getElementById('addendum').value;
     var d = new Date(input);
     year = d.getFullYear();
