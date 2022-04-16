@@ -5,6 +5,7 @@
 
 var timer;
 var index;
+var year;
 
 function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
@@ -465,6 +466,10 @@ function online_function() {
     //var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
     //var addendum = '  addendum = "' + document.getElementById("addendum").value + '",\n';
     var addendum = '  addendum = "' + addendum_format + document.getElementById("addendum").value + ')",\n';
+    var input = document.getElementById('addendum').value;
+    var d = new Date(input);
+    year = d.getFullYear();
+    var addendum_year = '  year     = ' + year + ',\n';
 
     var keywordslist = '  keywords = "' + keywords_text + '"\n' + "}";
 
@@ -475,6 +480,7 @@ function online_function() {
     online_string += title;
     online_string += url;
     online_string += addendum;
+    online_string += addendum_year;
     online_string += keywordslist;
     navigator.clipboard.writeText(online_string);
 
@@ -506,6 +512,7 @@ function online_clear() {
         document.getElementById("author").value = "";
         document.getElementById("title").value = "";
         document.getElementById("addendum").value = "";
+        year = "";
         document.getElementById("keywords").value = "";
         document.getElementById("online_button_clear").style.background = '#087cfc';
         document.getElementById("online_button_clear").style.borderColor = '#087cfc';
