@@ -1,5 +1,5 @@
 ﻿// JavaScript source code
-
+//
 /*
 @InProceedings{
     citekey,
