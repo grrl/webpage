@@ -17,6 +17,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{F32D241F-B9E2-4A21-BF5F-20E9DF4A2809}"
 	ProjectSection(SolutionItems) = preProject
 		.htaccess = .htaccess
+		404.html = 404.html
 		article.html = article.html
 		book.html = book.html
 		conference.html = conference.html
