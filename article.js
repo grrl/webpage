@@ -381,7 +381,7 @@ function rotate_title(myindex, delay) {
 }
 
 function article_function() {
-
+    //we have to keep article title "" to show
     var article_string = "@article{";
     var code = document.getElementById("code").value + ',\n';
     var title = '  title     = "' + document.getElementById("title").value + '",\n';
