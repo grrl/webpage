@@ -582,6 +582,7 @@ function online_clear() {
         document.title = "Overleaf citations - made simple";
 
         keywords.length = 0;
+        authors.length = 0;
         document.getElementById("keywords_strings").style.color = "#6c757d";
         document.getElementById("keywords_strings").value = "No keywords yet";
         document.getElementById("keywords").style.borderColor = "#ced4da";
@@ -589,6 +590,9 @@ function online_clear() {
 
         document.getElementById("code").value = "";
         document.getElementById("author").value = "";
+        document.getElementById("author").style.borderColor = "#ced4da";
+        document.getElementById("authors").value = "No authors yet";
+        document.getElementById("authors").style.color = "#6c757d";
         document.getElementById("title").value = "";
         document.getElementById("addendum").value = "";
         year = "";
