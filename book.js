@@ -386,12 +386,89 @@ function stop_timeout() {
     clearTimeout(timer);
 }
 
+var authors = [];
+
+
+function author_function() {
+
+    var word = document.getElementById("author").value;
+
+
+    if (word == "") {
+        document.getElementById("author").style.borderColor = "red";
+        return;
+    }
+    else {
+        var document_string = "Added " + word;
+        document.title = document_string;
+        document.getElementById("author").style.borderColor = "rgb(221, 221, 221)";
+        document.getElementById("authors").style.color = "#000000";
+    }
+
+    authors.push(word);
+
+    var keywords_text = "";
+    var length = authors.length;
+    for (let index = 0; index < authors.length; ++index) {
+        const element = authors[index];
+        if (length == 1 || index == length - 1) {
+            keywords_text += element;
+        }
+        else {
+            keywords_text += element + ", ";
+        }
+    }
+    document.getElementById("authors").value = keywords_text;
+    document.getElementById("author").value = "";
+}
+
+function author_remove() {
+
+    if (authors.length > 0)
+        document.title = "Removed " + authors.pop();
+
+    //keywords.pop();
+
+
+    if (authors.length == 0) {
+        document.getElementById("authors").style.color = "#6c757d";
+        document.getElementById("authors").value = "No authors yet";
+    }
+    else {
+        var keywords_text = "";
+
+        for (let index = 0; index < authors.length; ++index) {
+            const element = authors[index];
+            if (authors.length == 1 || index == authors.length - 1) {
+                keywords_text += element;
+            }
+            else {
+                keywords_text += element + ", ";
+            }
+        }
+        document.getElementById("authors").value = keywords_text;
+
+    }
+}
+
 function book_function() {
+
+    var authors_text = "";
+    var length = authors.length;
+    for (let index = 0; index < authors.length; ++index) {
+        const element = authors[index];
+        if (length == 1 || index == length - 1) {
+            authors_text += element;
+        }
+        else {
+            authors_text += element + " and ";
+        }
+    }
 
     var book_string = "@book{";
     var code = document.getElementById("code").value + ',\n';
     var title = '  title     = "' + document.getElementById("title").value + '",\n';
-    var author = '  author    = "' + document.getElementById("author").value + '",\n';
+    var author = '  author    = "' + authors_text + '",\n';
     var year = '  year      = ' + document.getElementById("year").value + ',\n';
     var publisher = '  publisher = "' + document.getElementById("publisher").value + '",\n';
     var address = '  address   = "' + document.getElementById("address").value + '"\n' + "}";
@@ -426,7 +503,9 @@ function book_clear() {
         document.getElementById("code").value = "";
         document.getElementById("title").value = "";
         document.getElementById("author").value = "";
-        document.getElementById("year").value = "";
+        document.getElementById("author").style.borderColor = "#ced4da";
+        document.getElementById("authors").value = "No authors yet";
+        document.getElementById("authors").style.color = "#6c757d";        document.getElementById("year").value = "";
         document.getElementById("publisher").value = "";
         document.getElementById("address").value = "";
         document.getElementById("book_button_clear").style.background = '#087cfc';
