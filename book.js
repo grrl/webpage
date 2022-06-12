@@ -499,16 +499,16 @@ function book_clear() {
 
         document.title = "Overleaf citations - made simple";
 
+        while (authors.length > 0) {
+            authors.pop();
+        }
+
         document.getElementById("code").value = "";
         document.getElementById("title").value = "";
         document.getElementById("author").value = "";
         document.getElementById("author").style.borderColor = "#ced4da";
         document.getElementById("authors").value = "No authors yet";
         document.getElementById("authors").style.color = "#6c757d";
-
-        while (authors.length > 0) {
-            authors.pop();
-        }
 
         document.getElementById("year").value = "";
         document.getElementById("publisher").value = "";
