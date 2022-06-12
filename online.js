@@ -584,8 +584,8 @@ function online_clear() {
         while (keywords.length > 0) {
             keywords.pop();
         }
-        while (keywords.length > 0) {
-            keywords.pop();
+        while (authors.length > 0) {
+            authors.pop();
         }
         document.getElementById("keywords_strings").style.color = "#6c757d";
         document.getElementById("keywords_strings").value = "No keywords yet";
