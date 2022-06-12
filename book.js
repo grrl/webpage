@@ -505,7 +505,9 @@ function book_clear() {
         document.getElementById("author").value = "";
         document.getElementById("author").style.borderColor = "#ced4da";
         document.getElementById("authors").value = "No authors yet";
-        document.getElementById("authors").style.color = "#6c757d";        document.getElementById("year").value = "";
+        document.getElementById("authors").style.color = "#6c757d";
+        authors.length = 0;
+        document.getElementById("year").value = "";
         document.getElementById("publisher").value = "";
         document.getElementById("address").value = "";
         document.getElementById("book_button_clear").style.background = '#087cfc';

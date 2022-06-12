@@ -593,6 +593,7 @@ function online_clear() {
         document.getElementById("author").style.borderColor = "#ced4da";
         document.getElementById("authors").value = "No authors yet";
         document.getElementById("authors").style.color = "#6c757d";
+
         document.getElementById("title").value = "";
         document.getElementById("addendum").value = "";
         year = "";
