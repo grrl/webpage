@@ -507,7 +507,7 @@ function book_clear() {
         document.getElementById("authors").style.color = "#6c757d";
 
         while (authors.length > 0) {
-            authors.pop();
+            author_remove();
         }
 
         document.getElementById("year").value = "";
