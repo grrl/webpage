@@ -454,6 +454,7 @@ function book_function() {
 
     var authors_text = "";
     var length = authors.length;
+    Console.log("authors lenght " + length);
     for (let index = 0; index < authors.length; ++index) {
         const element = authors[index];
         if (length == 1 || index == length - 1) {
