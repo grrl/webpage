@@ -581,8 +581,12 @@ function online_clear() {
 
         document.title = "Overleaf citations - made simple";
 
-        keywords.length = 0;
-        authors.length = 0;
+        while (keywords.length > 0) {
+            keywords.pop();
+        }
+        while (keywords.length > 0) {
+            keywords.pop();
+        }
         document.getElementById("keywords_strings").style.color = "#6c757d";
         document.getElementById("keywords_strings").value = "No keywords yet";
         document.getElementById("keywords").style.borderColor = "#ced4da";

@@ -505,7 +505,10 @@ function conference_clear() {
         document.getElementById("authors").value = "No authors yet";
         document.getElementById("authors").style.color = "#6c757d";
 
-        authors.length = 0;
+        while (authors.length > 0) {
+            authors.pop();
+        }
+
         document.getElementById("title").value = "";
         document.getElementById("booktitle").value = "";
         document.getElementById("year").value = "";
