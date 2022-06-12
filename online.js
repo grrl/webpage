@@ -581,27 +581,29 @@ function online_clear() {
 
         document.title = "Overleaf citations - made simple";
 
-        while (keywords.length > 0) {
-            keywords.pop();
-        }
-        while (authors.length > 0) {
-            authors.pop();
-        }
+
         document.getElementById("keywords_strings").style.color = "#6c757d";
         document.getElementById("keywords_strings").value = "No keywords yet";
         document.getElementById("keywords").style.borderColor = "#ced4da";
+        document.getElementById("keywords").value = "";
         document.getElementById("url").value = "";
+
+        while (keywords.length > 0) {
+            keywords.pop();
+        }
 
         document.getElementById("code").value = "";
         document.getElementById("author").value = "";
         document.getElementById("author").style.borderColor = "#ced4da";
         document.getElementById("authors").value = "No authors yet";
         document.getElementById("authors").style.color = "#6c757d";
-
+        while (authors.length > 0) {
+            authors.pop();
+        }
         document.getElementById("title").value = "";
         document.getElementById("addendum").value = "";
         year = "";
-        document.getElementById("keywords").value = "";
+
         document.getElementById("online_button_clear").style.background = '#087cfc';
         document.getElementById("online_button_clear").style.borderColor = '#087cfc';
         document.getElementById("online_button_clear").innerHTML = "Clear all";
