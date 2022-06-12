@@ -393,7 +393,6 @@ function author_function() {
 
     var word = document.getElementById("author").value;
 
-
     if (word == "") {
         document.getElementById("author").style.borderColor = "red";
         return;
@@ -506,7 +505,7 @@ function book_clear() {
         document.getElementById("author").style.borderColor = "#ced4da";
         document.getElementById("authors").value = "No authors yet";
         document.getElementById("authors").style.color = "#6c757d";
-        authors.length = 0;
+        authors = [];
         document.getElementById("year").value = "";
         document.getElementById("publisher").value = "";
         document.getElementById("address").value = "";
